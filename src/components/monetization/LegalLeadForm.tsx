@@ -27,7 +27,8 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facili
     const formData = new FormData(e.currentTarget);
     
     try {
-      await saveLegalLead({
+      console.log("Submitting lead to:", process.env.NEXT_PUBLIC_SUPABASE_URL);
+      const result = await saveLegalLead({
         facility_id: facilityId,
         facility_name: facilityName,
         full_name: formData.get('fullName') as string,
@@ -36,14 +37,17 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facili
         message: formData.get('message') as string,
       });
       
+      console.log("Submission successful:", result);
       setIsSubmitted(true);
       // Auto-close after success
       setTimeout(() => {
         onClose();
         setIsSubmitted(false);
       }, 3000);
-    } catch (err) {
-      setError("Failed to submit request. Please try again.");
+    } catch (err: any) {
+      console.error("Submission error:", err);
+      setError(`Error: ${err.message || 'Unknown failure'}`);
+      alert(`Debug Error: ${err.message || JSON.stringify(err)}`);
     } finally {
       setIsSubmitting(false);
     }
