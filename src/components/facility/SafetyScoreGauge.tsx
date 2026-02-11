@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, ShieldAlert, ShieldCheck } from "lucide-react";
+import { Shield, ShieldAlert, ShieldCheck, Info } from "lucide-react";
 
 interface SafetyScoreGaugeProps {
   score: number;
@@ -24,9 +24,17 @@ export function SafetyScoreGauge({ score, grade }: SafetyScoreGaugeProps) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full md:w-auto min-w-[200px]">
-      <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
+    <div className="flex flex-col items-center justify-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full md:w-auto min-w-[200px] relative group/gauge">
+      <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">
         Safety Grade
+        <div className="relative group/info">
+          <Info size={14} className="cursor-help text-slate-300 hover:text-slate-500 transition-colors" />
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-3 bg-slate-900 text-white text-[10px] font-medium leading-relaxed rounded-xl opacity-0 invisible group-hover/info:opacity-100 group-hover/info:visible transition-all z-20 shadow-xl pointer-events-none">
+            <span className="block font-black mb-1 uppercase tracking-widest text-blue-400">Mathematics Over Marketing</span>
+            This grade is calculated autonomously using weighted citation frequency, scope & severity multipliers (A-L), and temporal decay. Rankings are data-driven and cannot be influenced by facility partnerships.
+            <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900"></div>
+          </div>
+        </div>
       </div>
       
       <div className="relative flex items-center justify-center w-24 h-24 mb-2">

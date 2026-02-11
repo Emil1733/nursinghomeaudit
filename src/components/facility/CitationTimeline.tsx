@@ -96,10 +96,21 @@ function CitationCard({ violation }: { violation: Violation }) {
         </div>
       </div>
       
-      {/* Visual Indicator of Severity (Mocked for now) */}
-      <div className="bg-slate-50 border-t border-slate-100 px-5 py-2 flex items-center justify-between">
-         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Scope & Severity</span>
-         <span className="text-[10px] font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-full uppercase">High Impact</span>
+      {/* Visual Indicator of Severity (Objectivity Signal) */}
+      <div className="bg-slate-50 border-t border-slate-100 px-5 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+         <div className="flex items-center gap-2">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Scope & Severity (CMS Alpha)</span>
+            <div className="flex items-center gap-1">
+                {['G', 'H', 'I', 'J', 'K', 'L'].includes(violation.severity_scope || 'D') ? (
+                    <span className="text-[10px] font-black text-rose-600 px-2 py-0.5 rounded-full bg-rose-50 border border-rose-100">Harm Level Detected</span>
+                ) : (
+                    <span className="text-[10px] font-bold text-slate-500 px-2 py-0.5 rounded-full bg-slate-200 border border-slate-300">Potential for Harm</span>
+                )}
+            </div>
+         </div>
+         <div className="text-[9px] font-black text-slate-300 uppercase tracking-widest hidden sm:block">
+            Standard Identification Protocol
+         </div>
       </div>
     </div>
   );
