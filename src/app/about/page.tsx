@@ -6,17 +6,25 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Nursing Home Audit | Our Mission for Transparency",
   description: "Learn how Nursing Home Audit uses federal CMS data and AI to provide free, transparent safety audits for Texas nursing homes.",
+  alternates: {
+    canonical: '/about',
+  },
   openGraph: {
     title: "About Nursing Home Audit | Our Mission",
     description: "Empowering families with truth. We track what nursing homes try to hide.",
   }
 };
 
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+
 export default function AboutPage() {
   return (
     <div className="bg-slate-50 min-h-screen pb-20">
       <div className="bg-white border-b border-slate-200">
-        <div className="max-w-3xl mx-auto px-6 py-16 text-center">
+        <div className="max-w-3xl mx-auto px-6 py-8">
+            <Breadcrumbs items={[{ label: 'About Us', href: '/about' }]} />
+        </div>
+        <div className="max-w-3xl mx-auto px-6 pb-16 text-center">
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
             We Believe in Radical Transparency
           </h1>

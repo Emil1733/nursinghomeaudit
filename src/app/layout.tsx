@@ -20,9 +20,6 @@ export const metadata: Metadata = {
     template: "%s | Nursing Home Audit"
   },
   description: "Free, real-time safety audit of every Texas nursing home. Search 1,176+ facilities for history of violations, health scores, and AI family summaries.",
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: 'Nursing Home Audit - Texas Long-Term Care Transparency',
     description: 'Protect your loved ones with transparency. Search 1,176+ Texas facilities for real-time safety records.',
@@ -44,6 +41,10 @@ export const metadata: Metadata = {
     title: 'Nursing Home Audit - Texas Long-Term Care Transparency',
     description: 'Search 1,176+ Texas facilities for real-time safety records.',
     images: ['https://nursinghomeaudit.com/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
   }
 };
 
@@ -78,6 +79,7 @@ export default function RootLayout({
                 <h4 className="text-white text-[10px] font-bold uppercase tracking-widest mb-4">Resources</h4>
                 <ul className="space-y-2 text-xs">
                   <li><Link href="/" className="hover:text-white transition-colors">Search Map</Link></li>
+                  <li><Link href="/directory" className="hover:text-white transition-colors">Browse Directory</Link></li>
                   <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                   <li><Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link></li>
                 </ul>

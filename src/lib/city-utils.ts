@@ -100,7 +100,7 @@ export async function getCityHubData(): Promise<Record<string, CityStats>> {
 
     cityHubs[city] = {
       name: city,
-      slug: encodeURIComponent(city.toLowerCase()), // Simple slug strategy
+      slug: city.toLowerCase().replace(/\s+/g, '-'), // Hyphenated slug strategy
       total_facilities: total,
       avg_safety_score: Math.round(totalScore / total),
       avg_violations: Math.round((totalViolations / total) * 10) / 10,
@@ -128,7 +128,7 @@ export async function getCityData(
   const hubs = await getCityHubData();
   // Case-insensitive lookup
   const cityKey = Object.keys(hubs).find(
-    (c) => c.toLowerCase() === cityNameDecoded.toLowerCase(),
+    (c) => c.toLowerCase().replace(/\s+/g, '-') === cityNameDecoded.toLowerCase().replace(/\s+/g, '-'),
   );
   return cityKey ? hubs[cityKey] : null;
 }

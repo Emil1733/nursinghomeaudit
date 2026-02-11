@@ -1,12 +1,14 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://nursinghomeaudit.com";
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: '/private/',
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/private/", "/api/"],
     },
-    sitemap: 'https://eldershield.ai/sitemap.xml',
-  }
+    sitemap: `${baseUrl}/sitemap.xml`,
+  };
 }

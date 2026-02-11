@@ -29,9 +29,24 @@ export default function CityHero({ cityData }: { cityData: CityStats }) {
             Nursing Homes in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{name}, TX</span>
           </h1>
           
-          <p className="text-lg text-gray-300 max-w-2xl">
-            We analyzed detailed federal inspection reports for all <strong className="text-white">{total_facilities}</strong> nursing homes in {name}.
-            Compare safety scores, fines, and staffing ratings to make the right choice for your family.
+          <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
+            {avg_safety_score >= 75 ? (
+              <>
+                Nursing homes in <strong className="text-white">{name}</strong> perform <strong className="text-emerald-400">better than the state average</strong>, 
+                with a collective Safety Score of {avg_safety_score}. 
+                Compare {total_facilities} facilities to find the best care.
+              </>
+            ) : (
+              <>
+                <span className="text-rose-400 font-bold block mb-2 uppercase tracking-wider text-xs flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span>
+                  Safety Alert
+                </span>
+                Residents in <strong className="text-white">{name}</strong> face <strong className="text-rose-400">higher safety risks</strong> than the Texas average. 
+                The city's collective score of {avg_safety_score} is below the standard. 
+                Check violation histories carefully.
+              </>
+            )}
           </p>
         </div>
 

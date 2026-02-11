@@ -61,6 +61,10 @@ export function RiskGauge({ violationCount, benchmark, city }: RiskGaugeProps) {
               : `${diffPercent}% more violations than city average`}
           </p>
         </div>
+        
+        <p className="text-[10px] text-slate-400 mt-4 text-center">
+          Source: 3-year federal inspection history (CMS.gov)
+        </p>
       </div>
     </div>
   );

@@ -5,14 +5,22 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Nursing Home Audit | Support & Corrections",
   description: "Get in touch with the Nursing Home Audit team for support, data corrections, or media inquiries.",
+  alternates: {
+    canonical: '/contact',
+  },
   openGraph: {
     title: "Contact Nursing Home Audit",
   }
 };
 
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+
 export default function ContactPage() {
   return (
-    <div className="bg-slate-50 min-h-screen flex items-center justify-center p-6">
+    <div className="bg-slate-50 min-h-screen flex flex-col items-center justify-center p-6">
+      <div className="w-full max-w-2xl mb-6">
+        <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
+      </div>
       <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 sm:p-12 max-w-2xl w-full border border-slate-100">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">

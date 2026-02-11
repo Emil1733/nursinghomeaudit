@@ -35,7 +35,15 @@ export function FacilityHeader({ facility }: { facility: Facility }) {
           <div className="flex items-center gap-2 text-slate-600 text-lg">
             <MapPin size={20} className="shrink-0" />
             <span>
-              {facility.address}, {facility.city}, {facility.state} {facility.zip_code}
+              <a 
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${facility.address}, ${facility.city}, ${facility.state} ${facility.zip_code}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-rose-600 hover:underline transition-colors"
+              >
+                {facility.address}
+              </a>
+              , <Link href={`/city/${facility.city.toLowerCase().replace(/\s+/g, '-')}`} className="underline hover:text-rose-600 transition-colors">{facility.city}</Link>, {facility.state} {facility.zip_code}
             </span>
           </div>
           {facility.owner_name && (

@@ -5,8 +5,17 @@ import { ShieldAlert } from "lucide-react";
 import { SearchAutocomplete } from "@/components/SearchAutocomplete";
 import { AlertTicker } from "@/components/AlertTicker";
 import { FacilityCard } from "@/components/facility/FacilityCard";
+import { Metadata } from "next";
 
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: "Texas Nursing Home Safety Audit | Search Ratings & Violations",
+  description: "Free, real-time safety audit of every Texas nursing home. Search 1,176+ facilities for history of violations, health scores, and AI family summaries.",
+  alternates: {
+    canonical: '/',
+  },
+};
 
 interface Violation {
   id: string;
@@ -130,6 +139,23 @@ export default async function Home() {
               <p className="text-slate-500 font-bold uppercase tracking-widest text-sm italic">Initializing federal data stream...</p>
             </div>
           )}
+        </div>
+
+        {/* Top Cities Internal Linking */}
+        <div className="mt-20 pt-12 border-t border-slate-200">
+          <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 text-center">
+            Browse Top Texas Cities
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-600">
+             {["Houston", "San Antonio", "Dallas", "Austin", "Fort Worth", "El Paso", "Arlington", "Corpus Christi", "Plano", "Lubbock"].map(city => (
+                <Link key={city} href={`/city/${city.toLowerCase().replace(/\s+/g, '-')}`} className="bg-white px-4 py-2 rounded-full border border-slate-200 hover:border-rose-200 hover:text-rose-600 transition-all shadow-sm">
+                  {city}
+                </Link>
+             ))}
+             <Link href="/directory" className="px-4 py-2 text-rose-600 hover:text-rose-700">
+                + View All Cities
+             </Link>
+          </div>
         </div>
       </main>
 
