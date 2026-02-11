@@ -1,14 +1,10 @@
 import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react';
 
 export default function Header() {
   return (
     <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group transition-all">
-          <div className="bg-slate-900 text-white p-2 rounded-xl shadow-lg shadow-slate-900/10 group-hover:scale-105 group-hover:bg-rose-600 transition-all duration-300">
-            <ShieldAlert size={22} strokeWidth={2.5} />
-          </div>
+        <Link href="/" className="flex items-center group transition-all">
           <div className="flex flex-col">
             <span className="font-black text-xl tracking-tight text-slate-900 leading-none">
               NursingHome<span className="text-rose-600">Audit</span>
