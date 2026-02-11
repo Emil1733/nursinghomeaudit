@@ -26,10 +26,10 @@ export async function saveLegalLead(lead: LegalLead) {
         phone: lead.phone,
         email: lead.email,
         message: lead.message,
-        status: 'new',
-        created_at: new Date().toISOString()
+        status: 'new'
       },
-    ]);
+    ])
+    .select();
 
   if (error) {
     console.error('Error saving lead:', error);
