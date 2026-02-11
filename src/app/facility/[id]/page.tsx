@@ -9,6 +9,7 @@ import { getFacilityIntel, getCityBenchmark } from "@/lib/intelligence";
 import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import Link from "next/link";
+import { LegalLeadSection } from "@/components/monetization/LegalLeadSection";
 
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
@@ -130,7 +131,10 @@ export default async function FacilityPage({ params }: PageProps) {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+        {/* Legal Lead Engagement (Conditional for F/D Grades) */}
+        <LegalLeadSection facilityName={facility.name} grade={grade} />
+
+        <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm mt-12">
           <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 px-2">Violation History</h2>
           <CitationTimeline violations={violations || []} />
         </div>
