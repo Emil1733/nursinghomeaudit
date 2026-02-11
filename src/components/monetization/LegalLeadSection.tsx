@@ -6,11 +6,12 @@ import { LegalLeadWidget } from './LegalLeadWidget';
 import { LegalLeadForm } from './LegalLeadForm';
 
 interface LegalLeadSectionProps {
+  facilityId: string;
   facilityName: string;
   grade: string;
 }
 
-export const LegalLeadSection: React.FC<LegalLeadSectionProps> = ({ facilityName, grade }) => {
+export const LegalLeadSection: React.FC<LegalLeadSectionProps> = ({ facilityId, facilityName, grade }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   // Trigger logic: Only F or D rated facilities
@@ -26,6 +27,7 @@ export const LegalLeadSection: React.FC<LegalLeadSectionProps> = ({ facilityName
         onOpenForm={() => setIsFormOpen(true)} 
       />
       <LegalLeadForm 
+        facilityId={facilityId}
         facilityName={facilityName} 
         isOpen={isFormOpen} 
         onClose={() => setIsFormOpen(false)} 

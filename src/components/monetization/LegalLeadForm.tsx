@@ -2,35 +2,51 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, Send, ShieldCheck, Lock, User, Phone, Mail, MessageSquare } from 'lucide-react';
+import { X, Send, ShieldCheck, Lock, User, Phone, Mail, MessageSquare, AlertCircle } from 'lucide-react';
+import { saveLegalLead } from '@/lib/leads';
 
 interface LegalLeadFormProps {
+  facilityId: string; // Added facilityId
   facilityName: string;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityName, isOpen, onClose }) => {
+export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facilityName, isOpen, onClose }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
     
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Auto-close after success
-    setTimeout(() => {
-      onClose();
-      setIsSubmitted(false);
-    }, 3000);
+    try {
+      await saveLegalLead({
+        facility_id: facilityId,
+        facility_name: facilityName,
+        full_name: formData.get('fullName') as string,
+        phone: formData.get('phone') as string,
+        email: formData.get('email') as string,
+        message: formData.get('message') as string,
+      });
+      
+      setIsSubmitted(true);
+      // Auto-close after success
+      setTimeout(() => {
+        onClose();
+        setIsSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      setError("Failed to submit request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -70,6 +86,7 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityName, isOp
                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                 <input
                   required
+                  name="fullName"
                   type="text"
                   placeholder="Full Name"
                   className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all"
@@ -81,6 +98,7 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityName, isOp
                   <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                   <input
                     required
+                    name="phone"
                     type="tel"
                     placeholder="Phone Number"
                     className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all"
@@ -90,6 +108,7 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityName, isOp
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                   <input
                     required
+                    name="email"
                     type="email"
                     placeholder="Email Address"
                     className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all"
@@ -101,11 +120,18 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityName, isOp
                 <MessageSquare className="absolute left-4 top-6 text-slate-300" size={18} />
                 <textarea
                   required
+                  name="message"
                   rows={3}
                   placeholder="Describe your concern (e.g., fall, neglect, unexplained injury)"
                   className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all resize-none"
                 />
               </div>
+
+              {error && (
+                <div className="p-3 bg-rose-50 text-rose-600 text-xs font-bold rounded-xl border border-rose-100 flex items-center gap-2">
+                  <AlertCircle size={14} /> {error}
+                </div>
+              )}
 
               <button
                 disabled={isSubmitting}

@@ -132,7 +132,7 @@ export default async function FacilityPage({ params }: PageProps) {
         </div>
 
         {/* Legal Lead Engagement (Conditional for F/D Grades) */}
-        <LegalLeadSection facilityName={facility.name} grade={grade} />
+        <LegalLeadSection facilityId={facility.id} facilityName={facility.name} grade={grade} />
 
         <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm mt-12">
           <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 px-2">Violation History</h2>
