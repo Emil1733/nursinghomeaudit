@@ -38,7 +38,6 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facili
       });
       
       console.log("Submission successful:", result);
-      alert(`Submission Result: ${JSON.stringify(result)}`);
       setIsSubmitted(true);
       // Auto-close after success
       setTimeout(() => {

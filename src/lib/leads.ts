@@ -28,8 +28,7 @@ export async function saveLegalLead(lead: LegalLead) {
         message: lead.message,
         status: 'new'
       },
-    ])
-    .select();
+    ]);
 
   if (error) {
     console.error('Error saving lead:', error);
