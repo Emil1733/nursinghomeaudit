@@ -38,6 +38,7 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facili
       });
       
       console.log("Submission successful:", result);
+      alert(`Debug Success! Submitted to: ${process.env.NEXT_PUBLIC_SUPABASE_URL}`);
       setIsSubmitted(true);
       // Auto-close after success
       setTimeout(() => {
