@@ -8,6 +8,7 @@ import { RiskGauge } from "@/components/facility/RiskGauge";
 import { getFacilityIntel, getCityBenchmark } from "@/lib/intelligence";
 import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import Link from "next/link";
 
 export const revalidate = 0;
 export const dynamic = 'force-dynamic';
@@ -132,6 +133,22 @@ export default async function FacilityPage({ params }: PageProps) {
         <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
           <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 px-2">Violation History</h2>
           <CitationTimeline violations={violations || []} />
+        </div>
+
+        {/* Resource Guide (Authority Link) */}
+        <div className="mt-12 p-8 bg-blue-900 rounded-3xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="max-w-md">
+                <h3 className="text-xl font-bold mb-2">Need help understanding this audit?</h3>
+                <p className="text-blue-200 text-sm leading-relaxed">
+                    Read our expert guide on interpreting federal health inspections and identifying safety red flags.
+                </p>
+            </div>
+            <Link 
+                href="/resources/reading-inspection-reports"
+                className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-blue-500 transition-colors whitespace-nowrap"
+            >
+                Open Guide
+            </Link>
         </div>
       </main>
     </div>

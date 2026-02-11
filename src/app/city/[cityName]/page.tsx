@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { FacilityCard } from '@/components/facility/FacilityCard';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import Link from 'next/link';
+import { BookOpen, ShieldAlert, ArrowUpRight as ArrowRightUp } from 'lucide-react';
 
 export const revalidate = 3600; // Revalidate every hour (or set to 0 for dev)
 
@@ -106,6 +107,53 @@ export default async function CityPage({ params }: PageProps) {
                   />
                 ))}
             </div>
+        </div>
+
+        {/* Resources for Families (Authority Boost) */}
+        <div className="mt-32 p-10 bg-white border border-slate-200 rounded-3xl">
+           <div className="flex flex-col md:flex-row items-center gap-10">
+              <div className="max-w-xl">
+                 <h2 className="text-3xl font-black text-slate-900 mb-4">Navigating Care in {cityData.name}</h2>
+                 <p className="text-slate-600 leading-relaxed mb-6">
+                    Our data helps you compare safety, but choosing a facility is a personal journey. Explore our free guides to help you make the most informed decision for your family.
+                 </p>
+                 <div className="flex flex-wrap gap-4">
+                    <Link 
+                        href="/resources/reading-inspection-reports"
+                        className="text-sm font-bold text-blue-600 flex items-center gap-1 hover:underline"
+                    >
+                        How to Read Reports <ArrowRightUp size={14} />
+                    </Link>
+                    <Link 
+                        href="/methodology"
+                        className="text-sm font-bold text-slate-400 flex items-center gap-1 hover:underline"
+                    >
+                        Our Audit Methodology <ArrowRightUp size={14} />
+                    </Link>
+                 </div>
+              </div>
+              <div className="hidden lg:block w-px h-32 bg-slate-100"></div>
+              <div className="flex-1 space-y-4">
+                 <div className="flex gap-4">
+                    <div className="bg-blue-50 p-2 rounded-lg h-fit">
+                        <BookOpen className="text-blue-600" size={18} />
+                    </div>
+                    <div>
+                        <h4 className="text-sm font-bold text-slate-900">Texas Resident Rights</h4>
+                        <p className="text-xs text-slate-500">Know your legal protections in TX.</p>
+                    </div>
+                 </div>
+                 <div className="flex gap-4">
+                    <div className="bg-emerald-50 p-2 rounded-lg h-fit">
+                        <ShieldAlert className="text-emerald-600" size={18} />
+                    </div>
+                    <div>
+                        <h4 className="text-sm font-bold text-slate-900">Safety Red Flags</h4>
+                        <p className="text-xs text-slate-500">Signs of neglect to watch for.</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
 
         {/* Horizontal Linking Footer */}

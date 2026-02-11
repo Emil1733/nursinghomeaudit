@@ -19,6 +19,9 @@ export default function Header() {
           <Link href="/directory" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">
             Directory
           </Link>
+          <Link href="/resources" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">
+            Resources
+          </Link>
           <Link href="/about" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">
             About
           </Link>
