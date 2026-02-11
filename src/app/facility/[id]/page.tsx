@@ -10,6 +10,7 @@ import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import Link from "next/link";
 import { LegalLeadSection } from "@/components/monetization/LegalLeadSection";
+import { DossierCTA } from "@/components/monetization/DossierCTA";
 import { Database, Clock, TrendingDown, TrendingUp, BarChart3 } from "lucide-react";
 
 export const revalidate = 0;
@@ -177,6 +178,18 @@ export default async function FacilityPage({ params }: PageProps) {
                     </p>
                 </div>
             </div>
+        </div>
+
+        {/* Premium Dossier CTA (Phase 2 Monetization) */}
+        <div className="mt-8">
+            <DossierCTA 
+                facilityName={facility.name} 
+                address={facility.address}
+                grade={grade} 
+                score={score}
+                violations={violations || []}
+                cityBenchmark={benchmark}
+            />
         </div>
 
         {/* Resource Guide (Authority Link) */}
