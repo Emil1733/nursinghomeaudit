@@ -7,7 +7,7 @@ import { AlertTicker } from "@/components/AlertTicker";
 import { FacilityCard } from "@/components/facility/FacilityCard";
 import { Metadata } from "next";
 
-export const revalidate = 0;
+export const revalidate = 3600; // Enable ISR: Revalidate every hour for instant CDN delivery
 
 export const metadata: Metadata = {
   title: "Texas Nursing Home Safety Audit | Search Ratings & Violations",
