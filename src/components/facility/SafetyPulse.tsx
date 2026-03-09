@@ -35,9 +35,9 @@ export function SafetyPulse({ summary }: { summary: AISummary }) {
           </div>
         </div>
 
-        <ul className="space-y-4">
+        <ul className="space-y-4" itemProp="description">
           {summary.bullets.map((bullet, idx) => (
-            <li key={idx} className="flex gap-4 group">
+            <li key={idx} className="flex gap-4 group" itemProp="reviewAspect">
               <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full transition-transform group-hover:scale-150 ${
                 isPositive ? 'bg-emerald-400' : isWarning ? 'bg-rose-400' : 'bg-slate-400'
               }`} />

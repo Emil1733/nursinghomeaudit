@@ -2,6 +2,7 @@ import { supabase } from "@/lib/supabase";
 import { FacilityHeader } from "@/components/facility/FacilityHeader";
 import { SafetyScoreGauge } from "@/components/facility/SafetyScoreGauge";
 import { CitationTimeline } from "@/components/facility/CitationTimeline";
+import { FacilityFAQ } from "@/components/facility/FacilityFAQ";
 import { notFound } from "next/navigation";
 import { SafetyPulse } from "@/components/facility/SafetyPulse";
 import { RiskGauge } from "@/components/facility/RiskGauge";
@@ -84,8 +85,35 @@ export default async function FacilityPage({ params }: PageProps) {
   const intel = getFacilityIntel(id);
   const benchmark = getCityBenchmark(facility.city);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NursingHome',
+    '@id': `${process.env.NEXT_PUBLIC_BASE_URL || 'https://nursinghomeaudit.com'}/facility/${id}`,
+    name: facility.name,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: facility.address,
+      addressLocality: facility.city,
+      addressRegion: facility.state,
+      postalCode: facility.zip_code,
+      addressCountry: 'US',
+    },
+    description: `Independent safety audit and health inspection reports for ${facility.name} in ${facility.city}, ${facility.state}. View safety grades and recent violations.`,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: score,
+      bestRating: '100',
+      worstRating: '0',
+      reviewCount: violations?.length || 0,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-rose-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="max-w-4xl mx-auto px-6 py-12">
         <Breadcrumbs 
             items={[
@@ -140,6 +168,9 @@ export default async function FacilityPage({ params }: PageProps) {
           <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 px-2">Violation History</h2>
           <CitationTimeline violations={violations || []} />
         </div>
+
+        {/* AI-Targeted FAQ Section */}
+        <FacilityFAQ facilityName={facility.name} violationsCount={violations?.length || 0} grade={grade} score={score} city={facility.city} />
 
         {/* Regional Benchmarking (Objectivity Signal) */}
         <div className="mt-8 bg-white border border-slate-200 rounded-[32px] p-8 shadow-sm">
