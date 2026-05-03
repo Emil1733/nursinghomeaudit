@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FileDown, Sparkles, ShieldCheck, AlertCircle, ArrowRight, Loader2 } from 'lucide-react';
 import { generateDossierPDF } from '@/lib/pdfGenerator';
 
@@ -13,6 +13,19 @@ interface DossierCTAProps {
   cityBenchmark: any;
 }
 
+const DossierSerial = () => {
+  const [serial, setSerial] = useState("00000");
+  useEffect(() => {
+    setSerial(Math.random().toString(36).substring(7).toUpperCase());
+  }, []);
+
+  return (
+    <div className="mono-data text-[10px] font-bold text-slate-300 uppercase tracking-widest">
+      Serial: {serial}
+    </div>
+  );
+};
+
 export const DossierCTA: React.FC<DossierCTAProps> = ({ 
   facilityName, 
   address,
@@ -22,38 +35,31 @@ export const DossierCTA: React.FC<DossierCTAProps> = ({
   cityBenchmark 
 }) => {
   const [isGenerating, setIsGenerating] = useState(false);
-  const [hasPaid, setHasPaid] = useState(false); // Simulated for now
-  // Dynamic content based on grade
-  let title = "Download Full Safety Dossier";
-  let subtitle = "Get a comprehensive 15-page audit including trend analysis and owner transparency.";
-  let badgeText = "Professional Audit";
+  const [hasPaid, setHasPaid] = useState(false);
+  
+  let title = "REDACTED AUDIT RECORD";
+  let subtitle = "Access the comprehensive 15-page analytical dossier including deep owner transparency.";
+  let buttonText = "Acquire Dossier ($19)";
+  let badgeText = "Intelligence Dossier";
   let Icon = FileDown;
-  let colorTheme = "bg-slate-900 border-slate-800";
-  let buttonText = "Download Dossier ($19)";
 
   if (['A', 'B'].includes(grade)) {
-    title = "Facility Excellence Report";
+    title = "CERTIFICATE OF EXCELLENCE";
     subtitle = "A verified verification report confirming safety benchmarks and peak performance markers.";
     badgeText = "Excellence Verified";
     Icon = ShieldCheck;
-    colorTheme = "bg-emerald-900 border-emerald-800";
-    buttonText = "Get Excellence Report ($19)";
+    buttonText = "Verify Excellence ($19)";
   } else if (['D', 'F'].includes(grade)) {
-    title = "Full Evidence Dossier";
+    title = "EVIDENCE CUSTODY LOG";
     subtitle = "Documented history of neglect citations, staffing failures, and ownership risk profiles.";
     badgeText = "Critical Evidence";
     Icon = AlertCircle;
-    colorTheme = "bg-rose-950 border-rose-900";
-    buttonText = "Download Evidence Dossier ($19)";
+    buttonText = "Download Evidence ($19)";
   }
 
   const handlePurchase = () => {
-    // In production, this opens Lemon Squeezy
-    // For now, we simulate success
-    const confirm = window.confirm("Debug Mode: Simulate successful checkout via Lemon Squeezy?");
-    if (confirm) {
-      setHasPaid(true);
-    }
+    const confirm = window.confirm("Debug: Initialize Lemon Squeezy Transaction?");
+    if (confirm) setHasPaid(true);
   };
 
   const handleDownload = async () => {
@@ -73,65 +79,67 @@ export const DossierCTA: React.FC<DossierCTAProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-[40px] p-8 md:p-12 text-white shadow-2xl ${colorTheme} border-4 transition-all hover:scale-[1.01]`}>
-      {/* Background Glow */}
-      <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-[100px]" />
-      <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-blue-500/10 blur-[100px]" />
+    <div className="relative intelligence-grid bg-white p-8 md:p-16 border overflow-hidden mt-16">
+      <div className="absolute top-0 right-0 p-4 opacity-5">
+        <Icon size={120} />
+      </div>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="max-w-xl text-center md:text-left">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest backdrop-blur-md">
-            <Sparkles size={14} className="text-blue-300" />
-            {badgeText}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="max-w-2xl">
+          <div className="mb-8 flex items-center gap-3">
+             <div className="noted-status px-2 py-0.5 text-[10px] font-black uppercase tracking-widest text-slate-500">
+                Classification: {badgeText}
+             </div>
+             <DossierSerial />
           </div>
-          <h2 className="mb-4 text-3xl md:text-4xl font-black tracking-tight leading-tight">
+          
+          <h2 className="serif-heading text-3xl md:text-4xl font-black text-ink leading-[1] tracking-tighter mb-6">
             {title}
           </h2>
-          <p className="text-lg text-white/70 font-medium leading-relaxed">
-            {subtitle} Perfect for families, legal preparation, or professional due diligence.
+          
+          <p className="serif-heading italic text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
+            "{subtitle}"
           </p>
           
-          <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-6 text-[11px] font-bold uppercase tracking-widest text-white/50">
-            <span className="flex items-center gap-2">
-              <ShieldCheck size={14} className="text-blue-400" /> 100% Data Backed
-            </span>
-            <span className="flex items-center gap-2">
-              <ShieldCheck size={14} className="text-blue-400" /> Print-Ready PDF
-            </span>
-            <span className="flex items-center gap-2">
-              <ShieldCheck size={14} className="text-blue-400" /> Instant Delivery
-            </span>
+          <div className="grid grid-cols-2 gap-8 border-t border-border-light pt-8">
+            <div className="flex flex-col gap-1">
+                <span className="mono-data text-[9px] font-bold text-slate-400 uppercase tracking-widest">Verification</span>
+                <span className="mono-data text-[11px] font-black uppercase">100% Data Backed</span>
+            </div>
+            <div className="flex flex-col gap-1">
+                <span className="mono-data text-[9px] font-bold text-slate-400 uppercase tracking-widest">Format</span>
+                <span className="mono-data text-[11px] font-black uppercase">Technical PDF Dossier</span>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 shrink-0">
           {!hasPaid ? (
             <button 
               onClick={handlePurchase}
-              className="group flex items-center gap-4 rounded-3xl bg-white px-8 py-6 text-sm font-black uppercase tracking-[0.2em] text-slate-950 shadow-xl transition-all hover:bg-blue-50 hover:scale-105 active:scale-95"
+              className="group flex items-center gap-6 bg-slate-900 text-white px-12 py-8 text-sm font-black uppercase tracking-[0.2em] transition-all hover:bg-heritage-blue active:scale-95 shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
             >
-              <Icon size={20} className="transition-transform group-hover:-translate-y-1" />
+              <Icon size={24} className="transition-transform group-hover:-translate-y-1" />
               {buttonText}
-              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
           ) : (
             <button 
               onClick={handleDownload}
               disabled={isGenerating}
-              className="group flex items-center gap-4 rounded-3xl bg-emerald-500 px-8 py-6 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-emerald-600 hover:scale-105 active:scale-95 disabled:opacity-50"
+              className="group flex items-center gap-6 bg-heritage-blue text-white px-10 py-6 text-sm font-black uppercase tracking-[0.2em] transition-all hover:opacity-90 active:scale-95 disabled:opacity-50"
             >
               {isGenerating ? (
                 <Loader2 size={20} className="animate-spin" />
               ) : (
                 <FileDown size={20} className="transition-transform group-hover:-translate-y-1" />
               )}
-              Start Download
-              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              Initialize Export
             </button>
           )}
-          <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest">
-            {hasPaid ? "Payment Verified" : "Secure checkout by Lemon Squeezy"}
-          </p>
+          <div className="flex flex-col items-center gap-1 mt-4">
+             <span className="mono-data text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em]">Transaction Protocol Secured</span>
+             <span className="mono-data text-[8px] font-medium text-slate-300">Lemon Squeezy v2.4 Encryption</span>
+          </div>
         </div>
       </div>
     </div>

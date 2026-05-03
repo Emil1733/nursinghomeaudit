@@ -18,8 +18,7 @@ export function RiskGauge({ violationCount, benchmark, city }: RiskGaugeProps) {
 
   return (
     <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden group">
-      <div className="relative z-10">
-        <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Regional Context</h3>
+      <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 relative z-10">Regional Context</h3>
         
         <div className="space-y-6">
           {/* Facility Bar */}
@@ -62,10 +61,9 @@ export function RiskGauge({ violationCount, benchmark, city }: RiskGaugeProps) {
           </p>
         </div>
         
-        <p className="text-[10px] text-slate-400 mt-4 text-center">
+        <p className="text-[10px] text-slate-400 mt-4 text-center relative z-10">
           Source: 3-year federal inspection history (CMS.gov)
         </p>
-      </div>
     </div>
   );
 }

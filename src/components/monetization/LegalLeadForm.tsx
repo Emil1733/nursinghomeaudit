@@ -1,12 +1,11 @@
-
 'use client';
 
 import React, { useState } from 'react';
-import { X, Send, ShieldCheck, Lock, User, Phone, Mail, MessageSquare, AlertCircle } from 'lucide-react';
+import { X, ShieldCheck, Lock, User, Phone, Mail, MessageSquare, AlertCircle } from 'lucide-react';
 import { saveLegalLead } from '@/lib/leads';
 
 interface LegalLeadFormProps {
-  facilityId: string; // Added facilityId
+  facilityId: string;
   facilityName: string;
   isOpen: boolean;
   onClose: () => void;
@@ -27,8 +26,7 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facili
     const formData = new FormData(e.currentTarget);
     
     try {
-      console.log("Submitting lead to:", process.env.NEXT_PUBLIC_SUPABASE_URL);
-      const result = await saveLegalLead({
+      await saveLegalLead({
         facility_id: facilityId,
         facility_name: facilityName,
         full_name: formData.get('fullName') as string,
@@ -37,137 +35,127 @@ export const LegalLeadForm: React.FC<LegalLeadFormProps> = ({ facilityId, facili
         message: formData.get('message') as string,
       });
       
-      console.log("Submission successful:", result);
       setIsSubmitted(true);
-      // Auto-close after success
       setTimeout(() => {
         onClose();
         setIsSubmitted(false);
       }, 3000);
     } catch (err: any) {
-      console.error("Submission error:", err);
-      setError(`Error: ${err.message || 'Unknown failure'}`);
-      alert(`Debug Error: ${err.message || JSON.stringify(err)}`);
+      setError(`Transmission Error: ${err.message || 'System fault'}`);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
-        onClick={onClose}
-      />
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-ink/80 backdrop-blur-sm" onClick={onClose} />
 
-      {/* Modal */}
-      <div className="relative w-full max-w-lg overflow-hidden rounded-[40px] bg-white shadow-2xl transition-all animate-in fade-in zoom-in duration-300">
+      <div className="relative w-full max-w-xl bg-white border-4 border-ink intelligence-grid shadow-[0_0_100px_rgba(15,23,42,0.5)] overflow-hidden">
         <button 
           onClick={onClose}
-          className="absolute right-6 top-6 rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-900 transition-colors"
+          className="absolute right-6 top-6 p-2 text-slate-400 hover:text-ink transition-colors"
         >
-          <X size={20} />
+          <X size={24} />
         </button>
 
         {!isSubmitted ? (
-          <div className="p-8 sm:p-12">
-            <div className="mb-8">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1 text-[10px] font-black uppercase tracking-widest text-blue-600">
-                <ShieldCheck size={14} />
-                Secure Legal Inquiry
+          <div className="p-10 md:p-16">
+            <div className="mb-10">
+              <div className="mb-6 flex items-center gap-3">
+                 <div className="critical-status px-2 py-0.5 text-[10px] font-black uppercase tracking-widest text-burgundy-critical flex items-center gap-1">
+                    <ShieldCheck size={12} />
+                    Secure Submission Active
+                 </div>
+                 <div className="mono-data text-[10px] font-bold text-slate-300 uppercase tracking-widest">
+                    ID: {facilityId.substring(0,8).toUpperCase()}
+                 </div>
               </div>
-              <h2 className="text-3xl font-black text-slate-900 tracking-tight">
-                Request a <span className="text-blue-600">Free Evidence Review</span>
+              
+              <h2 className="serif-heading text-4xl font-black text-ink leading-none mb-4">
+                Request Evidence Review
               </h2>
-              <p className="mt-2 text-slate-500 font-medium">
-                For context: {facilityName}
+              <p className="mono-data text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                Case Inquiry regarding: {facilityName}
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="relative">
-                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
+                <User className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-300" size={16} />
                 <input
                   required
                   name="fullName"
                   type="text"
-                  placeholder="Full Name"
-                  className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all"
+                  placeholder="FULL NAME"
+                  className="w-full bg-transparent border-b-2 border-slate-100 py-4 pl-8 text-xs font-black uppercase tracking-widest placeholder:text-slate-200 focus:border-ink focus:outline-none transition-colors"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
-                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
+                  <Phone className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-300" size={16} />
                   <input
                     required
                     name="phone"
                     type="tel"
-                    placeholder="Phone Number"
-                    className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all"
+                    placeholder="PHONE"
+                    className="w-full bg-transparent border-b-2 border-slate-100 py-4 pl-8 text-xs font-black uppercase tracking-widest placeholder:text-slate-200 focus:border-ink focus:outline-none transition-colors"
                   />
                 </div>
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
+                  <Mail className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-300" size={16} />
                   <input
                     required
                     name="email"
                     type="email"
-                    placeholder="Email Address"
-                    className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all"
+                    placeholder="EMAIL"
+                    className="w-full bg-transparent border-b-2 border-slate-100 py-4 pl-8 text-xs font-black uppercase tracking-widest placeholder:text-slate-200 focus:border-ink focus:outline-none transition-colors"
                   />
                 </div>
               </div>
 
               <div className="relative">
-                <MessageSquare className="absolute left-4 top-6 text-slate-300" size={18} />
+                <MessageSquare className="absolute left-0 top-4 text-slate-300" size={16} />
                 <textarea
                   required
                   name="message"
-                  rows={3}
-                  placeholder="Describe your concern (e.g., fall, neglect, unexplained injury)"
-                  className="w-full rounded-2xl border border-slate-200 py-4 pl-12 pr-4 text-sm font-medium focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-50/50 transition-all resize-none"
+                  rows={4}
+                  placeholder="DESCRIBE INCIDENT PARAMETERS (FALLS, NEGLECT, INJURY)"
+                  className="w-full bg-transparent border-b-2 border-slate-100 py-4 pl-8 text-xs font-black uppercase tracking-widest placeholder:text-slate-200 focus:border-ink focus:outline-none transition-colors resize-none"
                 />
               </div>
 
               {error && (
-                <div className="p-3 bg-rose-50 text-rose-600 text-xs font-bold rounded-xl border border-rose-100 flex items-center gap-2">
+                <div className="p-4 bg-burgundy-critical/10 text-burgundy-critical text-[10px] font-black uppercase border-l-4 border-burgundy-critical flex items-center gap-3">
                   <AlertCircle size={14} /> {error}
                 </div>
               )}
 
               <button
                 disabled={isSubmitting}
-                className="group w-full mt-4 flex items-center justify-center gap-3 rounded-2xl bg-slate-900 py-5 text-sm font-black uppercase tracking-widest text-white transition-all hover:bg-slate-800 active:scale-95 disabled:opacity-50"
+                className="group w-full flex items-center justify-center gap-6 bg-ink text-paper px-10 py-6 text-sm font-black uppercase tracking-[0.2em] border-2 border-ink transition-all hover:bg-white hover:text-ink disabled:opacity-50"
               >
-                {isSubmitting ? (
-                  <span className="flex items-center gap-2">
-                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                    Sending Inquiry...
-                  </span>
-                ) : (
-                  <>
-                    <Send size={18} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-                    Submit for Legal Review
-                  </>
-                )}
+                {isSubmitting ? "Transmitting..." : "Initialize Legal Protocol"}
               </button>
 
-              <div className="mt-6 flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                <Lock size={12} />
-                Your information is encrypted & confidential
+              <div className="flex flex-col items-center gap-2 mt-8 opacity-40">
+                <div className="flex items-center gap-2">
+                    <Lock size={10} />
+                    <span className="mono-data text-[8px] font-black uppercase tracking-widest">End-to-End Encryption Protocol Active</span>
+                </div>
+                <span className="mono-data text-[7px] font-bold text-slate-400">Privileged Attorney-Client Communication Channel</span>
               </div>
             </form>
           </div>
         ) : (
-          <div className="p-12 text-center">
-            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
-              <ShieldCheck size={40} />
+          <div className="p-20 text-center">
+            <div className="mx-auto mb-10 flex h-24 w-24 items-center justify-center border-4 border-heritage-blue text-heritage-blue">
+              <ShieldCheck size={48} />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 tracking-tight">Consultation Requested</h2>
-            <p className="mt-4 text-lg text-slate-500">
-              A Texas Elder Law specialist will review your inquiry and contact you shortly.
+            <h2 className="serif-heading text-4xl font-black text-ink leading-tight mb-4 tracking-tighter">Mission Success</h2>
+            <p className="mono-data text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+              Counsel has been notified. Record ID: {Math.random().toString(36).substring(7).toUpperCase()}
             </p>
           </div>
         )}

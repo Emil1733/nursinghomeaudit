@@ -51,7 +51,8 @@ async function fetchAllFacilities(): Promise<Facility[]> {
   const { data, error } = await supabase
     .from("facilities")
     .select("id, name, city, state, total_beds")
-    .eq("state", "TX"); // Ensure only TX for now
+    .eq("state", "TX")
+    .limit(2000); // Explicit limit — Supabase default cap is 1,000, we have 1,177+
 
   if (error) {
     console.error("Error fetching facilities:", error);
@@ -126,9 +127,18 @@ export async function getCityData(
   cityNameDecoded: string,
 ): Promise<CityStats | null> {
   const hubs = await getCityHubData();
-  // Case-insensitive lookup
+  // Normalize the incoming slug fully before comparison to handle any
+  // case/spacing/encoding mismatch that would cause a silent null return
+  const normalizedInput = cityNameDecoded
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/%20/g, '-');
   const cityKey = Object.keys(hubs).find(
-    (c) => c.toLowerCase().replace(/\s+/g, '-') === cityNameDecoded.toLowerCase().replace(/\s+/g, '-'),
+    (c) => c.toLowerCase().trim().replace(/\s+/g, '-') === normalizedInput,
   );
+  if (!cityKey) {
+    console.warn(`[getCityData] No match found for: "${cityNameDecoded}" (normalized: "${normalizedInput}")`);
+  }
   return cityKey ? hubs[cityKey] : null;
 }

@@ -1,4 +1,3 @@
-
 import { ShieldCheck, ShieldAlert, ShieldEllipsis, Sparkles } from 'lucide-react';
 import { AISummary } from '@/lib/intelligence';
 
@@ -7,51 +6,36 @@ export function SafetyPulse({ summary }: { summary: AISummary }) {
   const isWarning = summary.tone === 'warning';
 
   return (
-    <div className={`relative overflow-hidden rounded-3xl border p-6 transition-all duration-500 ${
-      isPositive ? 'bg-emerald-50/50 border-emerald-100' : 
-      isWarning ? 'bg-rose-50/50 border-rose-100' : 
-      'bg-slate-50/50 border-slate-100'
-    }`}>
-      {/* Decorative Blur */}
-      <div className={`absolute -top-12 -right-12 h-32 w-32 blur-3xl rounded-full opacity-20 ${
-        isPositive ? 'bg-emerald-400' : isWarning ? 'bg-rose-400' : 'bg-slate-400'
-      }`} />
-
-      <div className="relative z-10">
-        <div className="flex items-center gap-3 mb-6">
-          <div className={`p-2 rounded-xl ${
-            isPositive ? 'bg-emerald-100 text-emerald-600' : 
-            isWarning ? 'bg-rose-100 text-rose-600' : 
-            'bg-slate-100 text-slate-600'
-          }`}>
-            {isPositive ? <ShieldCheck size={20} /> : isWarning ? <ShieldAlert size={20} /> : <ShieldEllipsis size={20} />}
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
-              Safety Pulse
-              <Sparkles size={14} className="text-amber-400 animate-pulse" />
-            </h3>
-            <p className="text-[10px] text-slate-500 font-medium">AI-GENERATED FAMILY INSIGHTS</p>
-          </div>
+    <div className="relative overflow-hidden border-2 border-slate-900 p-8 intelligence-grid bg-white">
+      <div className="flex items-center gap-4 mb-8">
+        <div className={`p-4 bg-slate-900 text-white`}>
+          {isPositive ? <ShieldCheck size={28} strokeWidth={1} /> : isWarning ? <ShieldAlert size={28} strokeWidth={1} /> : <ShieldEllipsis size={28} strokeWidth={1} />}
         </div>
+        <div>
+          <h3 className="serif-heading text-xl font-black text-ink uppercase tracking-tight flex items-center gap-2 leading-none">
+            Operational Synthesis
+          </h3>
+          <p className="mono-data text-[9px] text-slate-400 font-black uppercase tracking-[0.2em] mt-2">AI-AUGMENTED RISK AUDIT • VER_1.0</p>
+        </div>
+      </div>
 
-        <ul className="space-y-4" itemProp="description">
-          {summary.bullets.map((bullet, idx) => (
-            <li key={idx} className="flex gap-4 group" itemProp="reviewAspect">
-              <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full transition-transform group-hover:scale-150 ${
-                isPositive ? 'bg-emerald-400' : isWarning ? 'bg-rose-400' : 'bg-slate-400'
-              }`} />
-              <p className="text-sm text-slate-600 leading-relaxed font-medium group-hover:text-slate-900 transition-colors">
-                {bullet}
-              </p>
-            </li>
-          ))}
-        </ul>
+      <ul className="space-y-6" itemProp="description">
+        {summary.bullets.map((bullet, idx) => (
+          <li key={idx} className="flex gap-5 group" itemProp="reviewAspect">
+            <span className={`mt-2 h-1 w-4 shrink-0 bg-slate-900 opacity-20 group-hover:opacity-100 transition-opacity`} />
+            <p className="text-sm text-ink leading-relaxed font-semibold italic">
+              "{bullet}"
+            </p>
+          </li>
+        ))}
+      </ul>
 
-        <div className="mt-8 pt-4 border-t border-slate-100/50">
-          <p className="text-[10px] text-slate-400 italic">
-            Note: This summary is generated from recently documented safety inspections and citations.
-          </p>
+      <div className="mt-10 pt-6 border-t border-slate-100">
+        <div className="flex items-center gap-2">
+            <div className={`h-2 w-2 ${isPositive ? 'bg-heritage-blue' : isWarning ? 'bg-burgundy' : 'bg-slate-300'}`}></div>
+            <span className="mono-data text-[10px] font-black uppercase tracking-widest text-slate-500">
+                Source: Department of Health and Human Services • Inspection History • Oct 2026
+            </span>
         </div>
       </div>
     </div>

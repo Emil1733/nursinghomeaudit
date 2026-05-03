@@ -57,15 +57,13 @@ export function SearchAutocomplete() {
   }, [query]);
 
   return (
-    <div className="relative max-w-lg mx-auto mb-16 group" ref={dropdownRef}>
-      <div className="absolute inset-0 bg-rose-200 blur-xl opacity-30 group-hover:opacity-50 transition-opacity rounded-full"></div>
-      
-      <div className="relative flex items-center bg-white shadow-xl shadow-slate-200/50 rounded-full border border-slate-200 pl-4 pr-2 py-2">
-        <div className="ml-2">
+    <div className="relative max-w-lg mx-auto mb-16 intelligence-grid" ref={dropdownRef}>
+      <div className="relative flex items-center bg-white border-2 border-slate-900 px-4 py-3">
+        <div className="mr-3">
           {isSearching ? (
-            <Loader2 className="text-rose-500 animate-spin" size={20} />
+            <Loader2 className="text-heritage-blue animate-spin" size={18} />
           ) : (
-            <Search className="text-slate-500" size={20} />
+            <Search className="text-slate-400" size={18} />
           )}
         </div>
         <input 
@@ -73,53 +71,53 @@ export function SearchAutocomplete() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && setIsOpen(true)}
-          placeholder="Search facility name or city..." 
-          aria-label="Search facilities"
-          className="flex-1 bg-transparent border-none outline-none ring-0 px-4 text-slate-700 placeholder:text-slate-500"
+          placeholder="ENTER FACILITY NAME OR REGION..." 
+          aria-label="Search database"
+          className="flex-1 bg-transparent border-none outline-none ring-0 px-2 text-sm font-black mono-data text-ink placeholder:text-slate-300 uppercase tracking-widest"
         />
-        <button className="bg-slate-900 text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-slate-800 transition-colors">
-          Audit
+        <button className="bg-slate-900 text-white px-8 py-3 font-black text-[10px] uppercase tracking-[0.2em] transition-all hover:bg-slate-800">
+          Search
         </button>
       </div>
 
       {/* Results Dropdown */}
       {isOpen && (matches.length > 0 || !isSearching) && (
-        <div className="absolute top-full left-0 right-0 mt-3 bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-          <div className="p-2">
+        <div className="absolute top-full left-0 right-0 mt-px bg-white border-x border-b border-slate-900 shadow-2xl z-50 animate-in fade-in slide-in-from-top-1 duration-200">
+          <div className="max-h-[400px] overflow-y-auto">
             {matches.length > 0 ? (
               matches.map((facility) => (
                 <Link
                   key={facility.id}
                   href={`/facility/${facility.id}`}
-                  className="flex items-center justify-between p-4 hover:bg-rose-50 rounded-2xl transition-colors group/item"
+                  className="flex items-center justify-between p-6 border-b border-slate-50 last:border-none hover:bg-slate-50 transition-colors group/item"
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="mt-1 p-2 bg-slate-100 rounded-lg group-hover/item:bg-white transition-colors">
-                      <MapPin size={16} className="text-slate-500" />
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 p-2 bg-slate-50 border border-slate-100 text-slate-400 group-hover/item:text-heritage-blue transition-colors">
+                      <MapPin size={14} />
                     </div>
                     <div>
-                      <div className="font-bold text-slate-900 group-hover/item:text-rose-600 transition-colors capitalize">
+                      <div className="serif-heading font-black text-ink group-hover/item:text-heritage-blue transition-colors capitalize text-lg leading-tight">
                         {facility.name.toLowerCase()}
                       </div>
-                      <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">
-                        {facility.city}, TX • #{facility.license_number}
+                      <div className="mono-data text-[9px] text-slate-400 font-black uppercase tracking-widest mt-1">
+                        Region: {facility.city}, TX • UID: {facility.license_number}
                       </div>
                     </div>
                   </div>
-                  <MoveRight size={18} className="text-slate-200 group-hover/item:text-rose-400 group-hover/item:translate-x-1 transition-all" />
+                  <MoveRight size={16} className="text-slate-200 group-hover/item:text-ink group-hover/item:translate-x-1 transition-all" />
                 </Link>
               ))
             ) : query.length >= 2 && !isSearching ? (
-              <div className="p-8 text-center text-slate-500 text-sm italic">
-                No facilities found matching "{query}"
+              <div className="p-12 text-center text-slate-400 font-black uppercase tracking-widest text-[10px]">
+                No matching records found for "{query}"
               </div>
             ) : null}
           </div>
           
           {matches.length > 0 && (
-            <div className="bg-slate-50/50 p-3 text-center border-t border-slate-100">
-               <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">
-                 Showing top results for "{query}"
+            <div className="bg-slate-900 p-3 text-center">
+               <span className="mono-data text-[8px] font-black text-white uppercase tracking-[0.3em]">
+                 Data Source: CMS Federal Registry
                </span>
             </div>
           )}

@@ -32,29 +32,30 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       />
 
       {/* Visual Breadcrumb */}
-      <ol className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+      <ol className="flex flex-wrap items-center gap-3 mono-data text-[10px] font-black uppercase tracking-widest text-slate-400">
         <li>
           <Link 
             href="/" 
-            className="flex items-center gap-1 hover:text-slate-900 transition-colors"
-            title="Home"
+            className="flex items-center gap-2 hover:text-ink transition-colors"
+            title="Registry Home"
           >
-            <Home size={14} />
+            <Home size={12} strokeWidth={3} />
+            <span>ROOT</span>
           </Link>
         </li>
         
         {items.map((item, index) => (
-          <li key={item.href} className="flex items-center gap-2">
-            <ChevronRight size={14} className="text-slate-300" />
+          <li key={item.href} className="flex items-center gap-3">
+            <span className="text-slate-200">/</span>
             
             {index === items.length - 1 ? (
-              <span className="font-semibold text-slate-800 line-clamp-1 max-w-[200px]" aria-current="page">
+              <span className="text-ink line-clamp-1 max-w-[300px]" aria-current="page">
                 {item.label}
               </span>
             ) : (
               <Link 
                 href={item.href}
-                className="hover:text-slate-900 transition-colors whitespace-nowrap"
+                className="hover:text-ink transition-colors whitespace-nowrap"
               >
                 {item.label}
               </Link>

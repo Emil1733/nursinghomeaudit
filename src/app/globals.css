@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --ink: #0F172A;
+  --paper: #F8FAFC;
+  --heritage-blue: #2563EB;
+  --slate-accent: #64748B;
+  --burgundy-critical: #7F1D1D;
+  --border-light: #E2E8F0;
+  
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@theme {
+  --color-ink: #0F172A;
+  --color-paper: #F8FAFC;
+  --color-heritage: #2563EB;
+  --color-critical: #7F1D1D;
+  
+  --font-serif: var(--font-serif), serif;
+  --font-mono: var(--font-mono), monospace;
+  --font-sans: var(--font-sans), sans-serif;
+}
+
+/* Intelligence Minimalism Utilities */
+@layer utilities {
+  .intelligence-grid {
+    border: 1px solid var(--border-light);
+  }
+  
+  .mono-data {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
+  }
+  
+  .serif-heading {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+
+  .audit-seal {
+    border: 1px solid var(--ink);
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .critical-status {
+    border: 1px solid var(--burgundy-critical);
+    border-left-width: 4px;
+    background: white;
+  }
+
+  .noted-status {
+    border: 1px solid var(--border-light);
+    background: var(--paper);
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); opacity: 1; }
+    25% { transform: translate(-1px, 1px); opacity: 0.8; }
+    50% { transform: translate(1px, -1px); opacity: 1; }
+    75% { transform: translate(-1px, -1px); opacity: 0.9; }
+    100% { transform: translate(0); opacity: 1; }
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  .animate-glitch-subtle {
+    animation: glitch 0.3s ease-in-out 3;
+  }
+
+  .animate-scanline {
+    animation: scanline 4s linear infinite;
+  }
 }

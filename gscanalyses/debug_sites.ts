@@ -2,7 +2,7 @@ import { google } from 'googleapis';
 import path from 'path';
 import fs from 'fs';
 
-const KEY_FILE_PATH = path.join(process.cwd(), 'gsc-credentials.json');
+const KEY_FILE_PATH = "c:\\Users\\tevat\\researchopportunities\\gsc-credentials.json";
 
 async function main() {
   if (!fs.existsSync(KEY_FILE_PATH)) {

@@ -1,20 +1,17 @@
 import { MetadataRoute } from 'next';
 import { supabase } from '@/lib/supabase';
 import { getAllCities } from '@/lib/city-utils';
-import { getFacilityIntel } from '@/lib/intelligence';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://nursinghomeaudit.com';
 
-  // 1. Fetch all facilities
+  // 1. Fetch ALL facilities — no intelligence filter, every page is live and indexable
   const { data: facilities } = await supabase
     .from('facilities')
-    .select('id, updated_at');
+    .select('id, updated_at')
+    .limit(2000); // Supabase default cap is 1,000 — we have 1,177+
 
-  // Sync with noindex logic: Only include facilities that have intelligence data
-  const indexableFacilities = (facilities || []).filter(fac => getFacilityIntel(fac.id));
-
-  const facilityUrls = indexableFacilities.map((fac) => ({
+  const facilityUrls = (facilities || []).map((fac) => ({
     url: `${baseUrl}/facility/${fac.id}`,
     lastModified: fac.updated_at ? new Date(fac.updated_at) : new Date(),
     changeFrequency: 'monthly' as const,

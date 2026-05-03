@@ -3,7 +3,7 @@ import path from "path";
 import { google } from "googleapis";
 
 // Place your Service Account JSON key in the project root as 'gsc-credentials.json'
-const KEY_FILE_PATH = path.join(process.cwd(), "gsc-credentials.json");
+const KEY_FILE_PATH = "c:\\Users\\tevat\\researchopportunities\\gsc-credentials.json";
 
 // ⚠️ The site URL registered in Google Search Console
 const SITE_URL = 'sc-domain:nursinghomeaudit.com';
