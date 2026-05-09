@@ -37,10 +37,40 @@ const intelligence = intelligenceRaw as unknown as {
   facilities: Record<string, FacilityIntelligence>;
 };
 
-// Helper: Title Case (e.g., "SAN ANTONIO" -> "San Antonio")
+// Special cases for city name normalization
+const CITY_OVERRIDES: Record<string, string> = {
+  'mcallen': 'McAllen',
+  'new braunfels': 'New Braunfels',
+  'el paso': 'El Paso',
+  'san antonio': 'San Antonio',
+  'fort worth': 'Fort Worth',
+  'round rock': 'Round Rock',
+  'corpus christi': 'Corpus Christi',
+  'the woodlands': 'The Woodlands',
+  'north richland hills': 'North Richland Hills',
+  'mount pleasant': 'Mount Pleasant',
+  'college station': 'College Station',
+  'sugar land': 'Sugar Land',
+  'league city': 'League City',
+  'wichita falls': 'Wichita Falls',
+  'san marcos': 'San Marcos',
+  'san angelo': 'San Angelo',
+  'flower mound': 'Flower Mound',
+  'texas city': 'Texas City',
+  'cedar hill': 'Cedar Hill',
+  'la grange': 'La Grange',
+  'el campo': 'El Campo',
+  'missouri city': 'Missouri City',
+  'glen rose': 'Glen Rose',
+};
+
+// Helper: Standardized Title Case with Overrides
 export function toTitleCase(str: string) {
   if (!str) return "";
-  return str.replace(
+  const lower = str.toLowerCase().trim();
+  if (CITY_OVERRIDES[lower]) return CITY_OVERRIDES[lower];
+  
+  return lower.replace(
     /\w\S*/g,
     (text) => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase(),
   );

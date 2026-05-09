@@ -1,182 +1,182 @@
 {
   "benchmarks": {
-    "MADISONVILLE": {
+    "Madisonville": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
     "Hillsboro": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "SNYDER": {
+    "Snyder": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Bryan": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 4
     },
-    "WINNIE": {
+    "Winnie": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Victoria": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 4
     },
-    "TYLER": {
+    "Tyler": {
       "avg_violations": 10.4,
-      "facility_count": 12
+      "facility_count": 13
     },
-    "MARLIN": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "CALDWELL": {
+    "Marlin": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LIBERTY": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "COLORADO CITY": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "TERRELL": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "UVALDE": {
+    "Caldwell": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "ALAMO": {
+    "Liberty": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Colorado City": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "STERLING CITY": {
+    "Terrell": {
+      "avg_violations": 10.4,
+      "facility_count": 3
+    },
+    "Uvalde": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Alamo": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Sterling City": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Alice": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 3
     },
     "Cedar Hill": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "COMMERCE": {
+    "Commerce": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Copperas Cove": {
       "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BONHAM": {
-      "avg_violations": 10.4,
       "facility_count": 2
+    },
+    "Bonham": {
+      "avg_violations": 10.4,
+      "facility_count": 3
     },
     "Brownsville": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 7
     },
-    "STEPHENVILLE": {
+    "Stephenville": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "SOUTHLAKE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "SPRING": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "HEBBRONVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MERCEDES": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GRAHAM": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "TOMBALL": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "HEARNE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "COLUMBUS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "RAYMONDVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GROVES": {
+    "Southlake": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "OLNEY": {
+    "Spring": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "JACKSONVILLE": {
+    "Hebbronville": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Mercedes": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Graham": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Tomball": {
+      "avg_violations": 10.4,
+      "facility_count": 5
+    },
+    "Hearne": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Columbus": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Raymondville": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Groves": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Olney": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Jacksonville": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "EDNA": {
+    "Edna": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Sugar Land": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 3
     },
-    "SCHERTZ": {
+    "Schertz": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "FLORESVILLE": {
+    "Floresville": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
     "Abilene": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 11
     },
     "Port Arthur": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 3
     },
-    "GATESVILLE": {
+    "Gatesville": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "WHARTON": {
+    "Wharton": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "HUNTSVILLE": {
+    "Huntsville": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "ORANGE": {
+    "Orange": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GLADEWATER": {
+    "Gladewater": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
@@ -184,11 +184,11 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ROSEBUD": {
+    "Rosebud": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HASKELL": {
+    "Haskell": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -200,135 +200,123 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "EDEN": {
+    "Eden": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "COPPERAS COVE": {
+    "Shepherd": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SHEPHERD": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LAKE WORTH": {
+    "Lake Worth": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Rockwall": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 4
     },
     "Wichita Falls": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 7
     },
     "Lindale": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "CARTHAGE": {
+    "Carthage": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
     "Midland": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 5
     },
     "Temple": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 10
     },
-    "COTULLA": {
+    "Cotulla": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Longview": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 9
     },
-    "BRYAN": {
+    "Forney": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "FORNEY": {
+    "Gilmer": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "GILMER": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "CLAUDE": {
+    "Claude": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Groesbeck": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
     "Azle": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LAKEWAY": {
+    "Lakeway": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PEARSALL": {
+    "Pearsall": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CELINA": {
+    "Celina": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ELECTRA": {
+    "Electra": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Gainesville": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 4
     },
-    "HEREFORD": {
+    "Hereford": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DESOTO": {
+    "Desoto": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 5
     },
-    "Terrell": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "HONEY GROVE": {
+    "Honey Grove": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PLANO": {
+    "Plano": {
       "avg_violations": 10.4,
-      "facility_count": 8
+      "facility_count": 9
     },
-    "ITASCA": {
+    "Itasca": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GRAND SALINE": {
+    "Grand Saline": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
     "Austin": {
       "avg_violations": 10.4,
-      "facility_count": 6
+      "facility_count": 25
     },
     "Lubbock": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 14
     },
-    "LAMESA": {
+    "Lamesa": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -338,31 +326,23 @@
     },
     "Texas City": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 5
     },
-    "Plano": {
+    "Ennis": {
       "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "ENNIS": {
-      "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 3
     },
     "North Richland Hills": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "DUMAS": {
+    "Dumas": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "Amarillo": {
       "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "Gilmer": {
-      "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 12
     },
     "Flatonia": {
       "avg_violations": 10.4,
@@ -374,105 +354,93 @@
     },
     "New Braunfels": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 5
     },
-    "HORSESHOE BAY": {
+    "Horseshoe Bay": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BURNET": {
+    "Burnet": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SAN MARCOS": {
+    "San Marcos": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 3
     },
-    "MCCAMEY": {
+    "Mccamey": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Baytown": {
       "avg_violations": 10.4,
+      "facility_count": 5
+    },
+    "Lufkin": {
+      "avg_violations": 10.4,
+      "facility_count": 6
+    },
+    "Harlingen": {
+      "avg_violations": 10.4,
+      "facility_count": 7
+    },
+    "Iowa Park": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Brookshire": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Newton": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "La Grange": {
+      "avg_violations": 10.4,
       "facility_count": 2
     },
-    "LUFKIN": {
-      "avg_violations": 10.4,
-      "facility_count": 6
-    },
-    "HARLINGEN": {
-      "avg_violations": 10.4,
-      "facility_count": 6
-    },
-    "IOWA PARK": {
+    "Llano": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BROOKSHIRE": {
+    "Elkhart": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SUGAR LAND": {
+    "Friona": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "NEWTON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LA GRANGE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LLANO": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "ELKHART": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "FRIONA": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PORT LAVACA": {
+    "Port Lavaca": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "Mount Pleasant": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 3
     },
     "Mexia": {
       "avg_violations": 10.4,
+      "facility_count": 3
+    },
+    "San Angelo": {
+      "avg_violations": 10.4,
+      "facility_count": 7
+    },
+    "Dimmitt": {
+      "avg_violations": 10.4,
       "facility_count": 2
     },
-    "SAN ANGELO": {
-      "avg_violations": 10.4,
-      "facility_count": 6
-    },
-    "DIMMITT": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "NEEDVILLE": {
+    "Needville": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "AUSTIN": {
-      "avg_violations": 10.4,
-      "facility_count": 19
-    },
-    "WESLACO": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "ROCKWALL": {
+    "Weslaco": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "MCLEAN": {
+    "Mclean": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -482,73 +450,69 @@
     },
     "Missouri City": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 4
     },
-    "GONZALES": {
+    "Gonzales": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "San Antonio": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 59
     },
-    "MALAKOFF": {
+    "Malakoff": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CHANDLER": {
+    "Chandler": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GAINESVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "HAMLIN": {
+    "Hamlin": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PLEASANTON": {
+    "Pleasanton": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "SAGINAW": {
+    "Saginaw": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "WILLOW PARK": {
+    "Willow Park": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MONAHANS": {
+    "Monahans": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "NACOGDOCHES": {
+    "Nacogdoches": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
     "Hurst": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "GARLAND": {
+    "Garland": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 6
     },
     "Ralls": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LITTLEFIELD": {
+    "Littlefield": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Georgetown": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "HUNTINGTON": {
+    "Huntington": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -556,65 +520,65 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MOUNT VERNON": {
+    "Mount Vernon": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BOWIE": {
+    "Bowie": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SMITHVILLE": {
+    "Smithville": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CHILDRESS": {
+    "Childress": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "RICHWOOD": {
+    "Richwood": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LUMBERTON": {
+    "Lumberton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SULPHUR SPRINGS": {
+    "Sulphur Springs": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "JAYTON": {
+    "Jayton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DEL RIO": {
+    "Del Rio": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "BORGER": {
+    "Borger": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "CROCKETT": {
+    "Crockett": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
     "Sherman": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 4
     },
     "Houston": {
       "avg_violations": 10.4,
-      "facility_count": 25
+      "facility_count": 60
     },
-    "ELDORADO": {
+    "Eldorado": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Irving": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 6
     },
     "Aspermont": {
       "avg_violations": 10.4,
@@ -624,147 +588,139 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BALCH SPRINGS": {
+    "Balch Springs": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DENTON": {
+    "Denton": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 6
     },
-    "DALLAS": {
+    "Dallas": {
       "avg_violations": 10.4,
-      "facility_count": 26
+      "facility_count": 35
     },
     "Woodville": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "POST": {
+    "Post": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CONROE": {
+    "Conroe": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 4
     },
-    "Columbus": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MARBLE FALLS": {
+    "Marble Falls": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Lancaster": {
       "avg_violations": 10.4,
+      "facility_count": 4
+    },
+    "Keller": {
+      "avg_violations": 10.4,
       "facility_count": 3
     },
-    "KELLER": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "LIVE OAK": {
+    "Live Oak": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PECOS": {
+    "Pecos": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SEMINOLE": {
+    "Seminole": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BRADY": {
+    "Brady": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LAREDO": {
+    "Laredo": {
       "avg_violations": 10.4,
-      "facility_count": 5
+      "facility_count": 6
     },
     "McAllen": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 7
     },
-    "TEAGUE": {
+    "Teague": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DIBOLL": {
+    "Diboll": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GRAND PRAIRIE": {
+    "Grand Prairie": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Carrollton": {
       "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "ARLINGTON": {
-      "avg_violations": 10.4,
       "facility_count": 5
     },
-    "ITALY": {
+    "Arlington": {
+      "avg_violations": 10.4,
+      "facility_count": 9
+    },
+    "Italy": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SHINER": {
+    "Shiner": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "El Paso": {
       "avg_violations": 10.4,
-      "facility_count": 6
+      "facility_count": 21
     },
-    "JASPER": {
+    "Jasper": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "WEBSTER": {
+    "Webster": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 3
     },
-    "DAYTON": {
+    "Dayton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "COLEMAN": {
+    "Coleman": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Tyler": {
+    "Rio Grande City": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Clarksville": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Red Oak": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "RIO GRANDE CITY": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "CLARKSVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "RED OAK": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "SAN JUAN": {
+    "San Juan": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Corpus Christi": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 12
     },
     "Pearland": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 4
     },
-    "BIG LAKE": {
+    "Big Lake": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -772,39 +728,31 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "FREDERICKSBURG": {
+    "Fredericksburg": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
     "College Station": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 3
     },
     "Angleton": {
       "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MUNDAY": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PORTER": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PORT ARTHUR": {
-      "avg_violations": 10.4,
       "facility_count": 2
     },
-    "ROCKDALE": {
+    "Munday": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Ennis": {
+    "Porter": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PLAINVIEW": {
+    "Rockdale": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Plainview": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
@@ -816,7 +764,7 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "STRATFORD": {
+    "Stratford": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -824,39 +772,27 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MIDLAND": {
-      "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "COPPELL": {
+    "Coppell": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CROWLEY": {
+    "Crowley": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "HENDERSON": {
+    "Henderson": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "CORSICANA": {
+    "Corsicana": {
       "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "HOUSTON": {
-      "avg_violations": 10.4,
-      "facility_count": 35
-    },
-    "AMARILLO": {
-      "avg_violations": 10.4,
-      "facility_count": 9
+      "facility_count": 5
     },
     "Wimberley": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DECATUR": {
+    "Decatur": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
@@ -864,47 +800,39 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BARTLETT": {
+    "Bartlett": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Beeville": {
       "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "CLUTE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Denton": {
-      "avg_violations": 10.4,
       "facility_count": 2
     },
-    "WINNSBORO": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "THE WOODLANDS": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "ROYSE CITY": {
+    "Clute": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MOUNT PLEASANT": {
+    "Winnsboro": {
       "avg_violations": 10.4,
       "facility_count": 2
+    },
+    "The Woodlands": {
+      "avg_violations": 10.4,
+      "facility_count": 4
+    },
+    "Royse City": {
+      "avg_violations": 10.4,
+      "facility_count": 1
     },
     "1205 Santa Fe Dr": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "FORT STOCKTON": {
+    "Fort Stockton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CENTER": {
+    "Center": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
@@ -912,101 +840,73 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Southlake": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "WOODVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "WHEELER": {
+    "Wheeler": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Glen Rose": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "SAN ANTONIO": {
-      "avg_violations": 10.4,
-      "facility_count": 56
-    },
-    "WICHITA FALLS": {
-      "avg_violations": 10.4,
-      "facility_count": 5
-    },
-    "BAIRD": {
+    "Baird": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GEORGETOWN": {
+    "Shavano Park": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GLEN ROSE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "SHAVANO PARK": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Dallas": {
-      "avg_violations": 10.4,
-      "facility_count": 9
-    },
-    "HIGHLAND VILLAGE": {
+    "Highland Village": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Round Rock": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 5
     },
     "Duncanville": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "SEGUIN": {
+    "Seguin": {
       "avg_violations": 10.4,
       "facility_count": 5
     },
-    "YOAKUM": {
+    "Yoakum": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
     "La Vernia": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DENVER CITY": {
+    "Denver City": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Mission": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "BOOKER": {
+    "Booker": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LAKE JACKSON": {
+    "Lake Jackson": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "ROBSTOWN": {
+    "Robstown": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "OLTON": {
+    "Olton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Weatherford": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 6
     },
     "Corpus Chrisit": {
       "avg_violations": 10.4,
@@ -1016,191 +916,139 @@
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "BERTRAM": {
+    "Bertram": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MINERAL WELLS": {
+    "Mineral Wells": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "GIDDINGS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "DAINGERFIELD": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "HAMILTON": {
+    "Giddings": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "KYLE": {
+    "Daingerfield": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "NEW BRAUNFELS": {
+    "Hamilton": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 2
     },
-    "La Grange": {
+    "Kyle": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "KIRBYVILLE": {
+    "Kirbyville": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Burleson": {
       "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MABANK": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BRENHAM": {
-      "avg_violations": 10.4,
       "facility_count": 3
     },
-    "WILLIS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "JUSTIN": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "FORT WORTH": {
-      "avg_violations": 10.4,
-      "facility_count": 18
-    },
-    "Giddings": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "WAXAHACHIE": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "FARMERSVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "PENITAS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "FLOWER MOUND": {
+    "Mabank": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Brenham": {
       "avg_violations": 10.4,
+      "facility_count": 4
+    },
+    "Willis": {
+      "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PFLUGERVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "Bonham": {
+    "Justin": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Fort Worth": {
       "avg_violations": 10.4,
-      "facility_count": 13
+      "facility_count": 31
     },
-    "San Angelo": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "COLLEGE STATION": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "DUNCANVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MONT BELVIEU": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "KAUFMAN": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "Caldwell": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "SAN SABA": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "DE LEON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Wharton": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "DENISON": {
+    "Waxahachie": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "GRANDVIEW": {
+    "Farmersville": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Penitas": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LEAGUE CITY": {
+    "Flower Mound": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Pflugerville": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Mont Belvieu": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CONVERSE": {
+    "Kaufman": {
+      "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "San Saba": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CLEVELAND": {
+    "De Leon": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PITTSBURG": {
+    "Denison": {
+      "avg_violations": 10.4,
+      "facility_count": 5
+    },
+    "Grandview": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ROUND ROCK": {
+    "League City": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "VAN ALSTYNE": {
+    "Converse": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "GOLIAD": {
+    "Cleveland": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PALESTINE": {
+    "Pittsburg": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Van Alstyne": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Goliad": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Palestine": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "EMORY": {
+    "Emory": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "EL PASO": {
+    "Lampasas": {
       "avg_violations": 10.4,
-      "facility_count": 15
+      "facility_count": 3
     },
-    "LAMPASAS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "WILLS POINT": {
+    "Wills Point": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1208,63 +1056,59 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BEDFORD": {
+    "Bedford": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "RICHMOND": {
+    "Richmond": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "EAGLE PASS": {
+    "Eagle Pass": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "TAYLOR": {
+    "Taylor": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HICO": {
+    "Hico": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Odessa": {
       "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "TEXARKANA": {
-      "avg_violations": 10.4,
       "facility_count": 6
     },
-    "VIDOR": {
+    "Texarkana": {
+      "avg_violations": 10.4,
+      "facility_count": 7
+    },
+    "Vidor": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "Granbury": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 4
     },
-    "SPEARMAN": {
+    "Spearman": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MATHIS": {
+    "Mathis": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "IRVING": {
+    "Edinburg": {
       "avg_violations": 10.4,
-      "facility_count": 5
+      "facility_count": 4
     },
-    "EDINBURG": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "KNOX CITY": {
+    "Knox City": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SILSBEE": {
+    "Silsbee": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
@@ -1272,23 +1116,19 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "KOUNTZE": {
+    "Kountze": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HUGHES SPRINGS": {
+    "Hughes Springs": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SPRINGTOWN": {
+    "Springtown": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "JACKSBORO": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GROESBECK": {
+    "Jacksboro": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1296,11 +1136,11 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "EULESS": {
+    "Euless": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DRIPPING SPRINGS": {
+    "Dripping Springs": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1308,123 +1148,91 @@
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "SHERMAN": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "BROWNSVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "MCKINNEY": {
+    "Mckinney": {
       "avg_violations": 10.4,
       "facility_count": 5
     },
-    "TRINITY": {
+    "Trinity": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "Luling": {
       "avg_violations": 10.4,
-      "facility_count": 2
+      "facility_count": 3
     },
-    "QUITMAN": {
+    "Quitman": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CARROLLTON": {
+    "Rockport": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "ROCKPORT": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "CROSBYTON": {
+    "Crosbyton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "KERRVILLE": {
+    "Kerrville": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "SCHULENBURG": {
+    "Schulenburg": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
     "Pasadena": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 7
     },
-    "WELLINGTON": {
+    "Wellington": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Katy": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 7
     },
-    "San Marcos": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BELTON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Tomball": {
+    "Belton": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "ELGIN": {
+    "Elgin": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Killeen": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "WHITE SETTLEMENT": {
+    "White Settlement": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "SEYMOUR": {
+    "Seymour": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "KARNES CITY": {
+    "Karnes City": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Liberty": {
+    "Muleshoe": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "League City": {
+    "Wylie": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Graham": {
+    "Bellville": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MULESHOE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "WYLIE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "BELLVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BIG SPRING": {
+    "Big Spring": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "BURKBURNETT": {
+    "Burkburnett": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
@@ -1432,15 +1240,11 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MISSION": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
     "Merkel": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "JEFFERSON": {
+    "Jefferson": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1448,31 +1252,19 @@
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "ALVIN": {
+    "Alvin": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "The Woodlands": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "ROBERT LEE": {
+    "Robert Lee": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Corsicana": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MERIDIAN": {
+    "Meridian": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Midlothian": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PEARLAND": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
@@ -1480,39 +1272,19 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "KATY": {
-      "avg_violations": 10.4,
-      "facility_count": 6
-    },
     "Richardson": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 7
     },
-    "Keller": {
+    "Livingston": {
+      "avg_violations": 10.4,
+      "facility_count": 3
+    },
+    "Corrigan": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Edinburg": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LIVINGSTON": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "CORRIGAN": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "JOHNSON CITY": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LUBBOCK": {
-      "avg_violations": 10.4,
-      "facility_count": 10
-    },
-    "HILLSBORO": {
+    "Johnson City": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1520,63 +1292,43 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BEEVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "SLATON": {
+    "Slaton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Navasota": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "MEXIA": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "WHITEHOUSE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "CLIFTON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "SAVOY": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "CLEBURNE": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "FRANKLIN": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GRANBURY": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "ATHENS": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "MANCHACA": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Conroe": {
+    "Whitehouse": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Clifton": {
       "avg_violations": 10.4,
+      "facility_count": 2
+    },
+    "Savoy": {
+      "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CASTROVILLE": {
+    "Cleburne": {
+      "avg_violations": 10.4,
+      "facility_count": 3
+    },
+    "Franklin": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Athens": {
+      "avg_violations": 10.4,
+      "facility_count": 3
+    },
+    "Manchaca": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Castroville": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1584,135 +1336,103 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ALLEN": {
+    "Allen": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "BELLMEAD": {
+    "Bellmead": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SWEETWATER": {
+    "Sweetwater": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "BROWNFIELD": {
+    "Brownfield": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "WACO": {
+    "Waco": {
       "avg_violations": 10.4,
-      "facility_count": 8
+      "facility_count": 13
     },
-    "FAIRFIELD": {
+    "Fairfield": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "KILLEEN": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LEWISVILLE": {
+    "Lewisville": {
       "avg_violations": 10.4,
       "facility_count": 2
-    },
-    "Madisonville": {
-      "avg_violations": 10.4,
-      "facility_count": 1
     },
     "Sealy": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "KILGORE": {
+    "Kilgore": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "PAMPA": {
+    "Pampa": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Livingston": {
+    "Carrizo Springs": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CARRIZO SPRINGS": {
+    "Andrews": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ANDREWS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "ATLANTA": {
+    "Atlanta": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Belton": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PILOT POINT": {
+    "Pilot Point": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Flower Mound": {
+    "Cooper": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "COOPER": {
+    "Menard": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MENARD": {
+    "Devine": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "DEVINE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Mcallen": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MARSHALL": {
+    "Marshall": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "RISING STAR": {
+    "Rising Star": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LINDALE": {
+    "Portland": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PORTLAND": {
+    "Comfort": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "COMFORT": {
+    "Crowell": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CROWELL": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "VICTORIA": {
+    "Frisco": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "FRISCO": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "PERRYTON": {
+    "Perryton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CUERO": {
+    "Cuero": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
@@ -1720,59 +1440,47 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ZAPATA": {
+    "Zapata": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "AMHERST": {
+    "Amherst": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MEMPHIS": {
+    "Memphis": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SAN AUGUSTINE": {
+    "San Augustine": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "MCALLEN": {
+    "Beaumont": {
       "avg_violations": 10.4,
-      "facility_count": 3
+      "facility_count": 9
     },
-    "BEAUMONT": {
-      "avg_violations": 10.4,
-      "facility_count": 8
-    },
-    "RUSK": {
+    "Rusk": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "WEATHERFORD": {
-      "avg_violations": 10.4,
-      "facility_count": 5
-    },
-    "LYTLE": {
+    "Lytle": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CRANE": {
+    "Crane": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HONDO": {
+    "Hondo": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BULLARD": {
+    "Bullard": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "OZONA": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Borger": {
+    "Ozona": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1780,87 +1488,67 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SPRING BRANCH": {
+    "Spring Branch": {
       "avg_violations": 10.4,
       "facility_count": 1
-    },
-    "BURLESON": {
-      "avg_violations": 10.4,
-      "facility_count": 2
     },
     "San Diego": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HEMPHILL": {
+    "Hemphill": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "Mesquite": {
       "avg_violations": 10.4,
-      "facility_count": 4
+      "facility_count": 8
     },
-    "CANADIAN": {
+    "Canadian": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CEDAR PARK": {
-      "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "RICHARDSON": {
-      "avg_violations": 10.4,
-      "facility_count": 6
-    },
-    "WHITNEY": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "ODESSA": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "ROWLETT": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Arlington": {
+    "Cedar Park": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "MOULTON": {
+    "Whitney": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LINDEN": {
+    "Rowlett": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "STAMFORD": {
+    "Moulton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "PASADENA": {
-      "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "CISCO": {
+    "Linden": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "VAN": {
+    "Stamford": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "WEIMAR": {
+    "Cisco": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Van": {
+      "avg_violations": 10.4,
+      "facility_count": 1
+    },
+    "Weimar": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
     "Cameron": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "BANGS": {
+    "Bangs": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1868,51 +1556,31 @@
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "RANGER": {
+    "Ranger": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Garland": {
+    "Kemp": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "KEMP": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "TEXAS CITY": {
+    "Greenville": {
       "avg_violations": 10.4,
       "facility_count": 4
     },
-    "Schulenburg": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GREENVILLE": {
-      "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "BOERNE": {
+    "Boerne": {
       "avg_violations": 10.4,
       "facility_count": 5
     },
-    "CENTERVILLE": {
+    "Centerville": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Lampasas": {
+    "Goldthwaite": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Beaumont": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GOLDTHWAITE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "BRECKENRIDGE": {
+    "Breckenridge": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1924,23 +1592,11 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CANTON": {
+    "Canton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Weslaco": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BRONTE": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MESQUITE": {
-      "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "NAVASOTA": {
+    "Bronte": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1948,7 +1604,7 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "EASTLAND": {
+    "Eastland": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -1956,95 +1612,63 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Waco": {
-      "avg_violations": 10.4,
-      "facility_count": 5
-    },
-    "ANGLETON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "COMANCHE": {
+    "Comanche": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "EL CAMPO": {
+    "El Campo": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "HALLETTSVILLE": {
+    "Hallettsville": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
     "Galveston": {
       "avg_violations": 10.4,
-      "facility_count": 1
+      "facility_count": 2
     },
-    "BANDERA": {
+    "Bandera": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "HUMBLE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "TEMPLE": {
+    "Humble": {
       "avg_violations": 10.4,
       "facility_count": 6
     },
-    "GANADO": {
+    "Ganado": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HENRIETTA": {
+    "Henrietta": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BALLINGER": {
+    "Ballinger": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "CLARENDON": {
+    "Clarendon": {
       "avg_violations": 10.4,
       "facility_count": 1
-    },
-    "MISSOURI CITY": {
-      "avg_violations": 10.4,
-      "facility_count": 3
     },
     "West": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "HEWITT": {
+    "Hewitt": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Webster": {
+    "Matador": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "El Campo": {
+    "Garrison": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "NORTH RICHLAND HILLS": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MATADOR": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "Desoto": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "GARRISON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "GRAPEVINE": {
+    "Grapevine": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
@@ -2052,11 +1676,11 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "BROWNWOOD": {
+    "Brownwood": {
       "avg_violations": 10.4,
       "facility_count": 6
     },
-    "YORKTOWN": {
+    "Yorktown": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
@@ -2064,25 +1688,9 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Humble": {
+    "Mineola": {
       "avg_violations": 10.4,
-      "facility_count": 4
-    },
-    "BAYTOWN": {
-      "avg_violations": 10.4,
-      "facility_count": 3
-    },
-    "Laredo": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "MINEOLA": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "ABILENE": {
-      "avg_violations": 10.4,
-      "facility_count": 7
+      "facility_count": 2
     },
     "Keene": {
       "avg_violations": 10.4,
@@ -2092,123 +1700,63 @@
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "Texarkana": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "LONGVIEW": {
-      "avg_violations": 10.4,
-      "facility_count": 8
-    },
-    "Denison": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
     "Levelland": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "CORPUS CHRISTI": {
-      "avg_violations": 10.4,
-      "facility_count": 8
-    },
-    "CAMERON": {
+    "Overton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "OVERTON": {
+    "Farwell": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "ALICE": {
-      "avg_violations": 10.4,
-      "facility_count": 2
-    },
-    "HURST": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "FARWELL": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PARIS": {
+    "Paris": {
       "avg_violations": 10.4,
       "facility_count": 5
-    },
-    "Harlingen": {
-      "avg_violations": 10.4,
-      "facility_count": 1
     },
     "Watauga": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MANSFIELD": {
+    "Mansfield": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "Mineola": {
+    "Princeton": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CEDAR HILL": {
+    "Vernon": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "LULING": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "PRINCETON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "VERNON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BASTROP": {
+    "Bastrop": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "LANCASTER": {
+    "Clyde": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "CLYDE": {
+    "Selma": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "SELMA": {
+    "Corinth": {
       "avg_violations": 10.4,
       "facility_count": 1
     },
-    "MIDLOTHIAN": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "CORINTH": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "BAY CITY": {
+    "Bay City": {
       "avg_violations": 10.4,
       "facility_count": 3
     },
-    "GALVESTON": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "KENEDY": {
+    "Kenedy": {
       "avg_violations": 10.4,
       "facility_count": 2
     },
-    "Yoakum": {
-      "avg_violations": 10.4,
-      "facility_count": 1
-    },
-    "EAGLE LAKE": {
+    "Eagle Lake": {
       "avg_violations": 10.4,
       "facility_count": 1
     }

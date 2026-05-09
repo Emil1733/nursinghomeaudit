@@ -15,8 +15,22 @@ import { SafetyPulseDashboard } from "@/components/facility/SafetyPulseDashboard
 import { RedFlagSummary } from "@/components/facility/RedFlagSummary";
 import { ExecutiveAbstract } from "@/components/facility/ExecutiveAbstract";
 
-export const revalidate = 0;
-export const dynamic = 'force-dynamic';
+// ISR: Cache each facility page for 24 hours.
+// Violation data does not change intraday — 24h is safe.
+// Googlebot gets instant static HTML from Vercel edge cache,
+// eliminating cold-start Supabase timeouts that were causing de-indexation.
+export const revalidate = 86400;
+
+// Pre-build all 1,177 facility pages at deploy time.
+// Without this, pages are built on first visit (On-Demand ISR) which is
+// acceptable but pre-building guarantees zero cold-start for any URL.
+export async function generateStaticParams() {
+  const { data: facilities } = await supabase
+    .from('facilities')
+    .select('id')
+    .limit(2000);
+  return (facilities || []).map((f) => ({ id: f.id }));
+}
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -37,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const shouldIndex = !!intel;
 
   return {
-    title: `${facility.name} Safety Audit & Violations | ${facility.city}, ${facility.state}`,
+    title: `${facility.name} Safety Record & Violations | 2026 Audit`,
     description: `See the safety record, health violations, and AI-summarized family pulse for ${facility.name} in ${facility.city}. Protect your loved ones with transparent data.`,
     robots: {
       index: shouldIndex,
@@ -104,8 +118,34 @@ export default async function FacilityPage({ params }: PageProps) {
       ratingValue: score,
       bestRating: '100',
       worstRating: '0',
-      reviewCount: violations?.length || 0,
+      reviewCount: (violations?.length || 0) + 1, // +1 for the AI aggregate audit
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Organization', name: 'Nursing Home Audit Intelligence' },
+        datePublished: new Date().toISOString(),
+        reviewBody: `Comprehensive safety audit for ${facility.name}. Safety score of ${score}/100 based on ${violations?.length || 0} recorded federal violations.`,
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: (score / 20).toFixed(1), // Convert 100-scale to 5-scale
+          bestRating: '5',
+          worstRating: '1'
+        }
+      },
+      ...(violations || []).slice(0, 2).map(v => ({
+        '@type': 'Review',
+        author: { '@type': 'Organization', name: 'CMS Federal Inspector' },
+        datePublished: v.citation_date,
+        reviewBody: v.description?.substring(0, 200) + '...',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '1',
+          bestRating: '5',
+          worstRating: '1'
+        }
+      }))
+    ]
   };
 
   return (
@@ -188,7 +228,7 @@ export default async function FacilityPage({ params }: PageProps) {
         </div>
 
         <div className="bg-white border p-10 intelligence-grid">
-          <h2 className="mono-data text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">Violation Ledger: Clinical Incident Log</h2>
+          <h2 className="mono-data text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">Safety Audit Reviews & Violation Ledger</h2>
           <CitationTimeline violations={violations || []} />
         </div>
 

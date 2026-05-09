@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : `Warning: ${cityData.name} nursing homes average a Critical Score (${score}/100). Review violations for all ${cityData.total_facilities} facilities before making a decision.`;
 
   return {
-    title: `Best & Worst Nursing Homes in ${cityData.name}, TX | 2026 Audit`,
+    title: `${cityData.name}, TX Nursing Home Safety Scores | 2026 Audit`,
     description: description,
     alternates: {
         canonical: `${baseUrl}/city/${rawCityName.toLowerCase().replace(/\s+/g, '-')}`
